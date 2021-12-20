@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    position: relative;
+    /* background: #e2e1e0; */
+}
+
+.frame{
+    width: 80vw;
+    max-width: 700px;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.canvas{
+    width: max-content;
+    height: inherit;
+    display: flex;
+}
+
+
+
+.canvas img{
+    width: 700px;
+    height: 50vh;
+}
+
+#prev, #next{
+    position: absolute;
+    top: 200px;
+    background-color: rgba(255, 255, 255);
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 100ms ease-in-out;
+    background-position: center;
+    background-size: cover;
+}
+
+#prev{
+    left: 10px;
+    background-image: url(./img/prev.svg);
+}
+
+#next{
+    right: 10px;
+    background-image: url(./img/next.svg);
+}
+
+#prev:hover, #next:hover{
+    transform: scale(1.2);
+}
+
+.nav-btns{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+.nav-btns button{
+    width: 12px;
+    height: 12px;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .6);
+    transform: scale(1);
+    transition: transform 100ms ease-in-out;
+}
+
+.nav-btns button:hover{
+    transform: scale(1.5);
+}
+
+.nav-btns button.selected{
+    background: white;
+    transform: scale(1.5);
+}
+
+footer{
+    font-size: 14px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 5px;
+    opacity: 0.3;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    color: blue;
+}
